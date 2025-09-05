@@ -8,10 +8,16 @@ def test_scraper_basic_workflow(sample_race_data: Dict[str, Any]) -> None:
     """Test basic end-to-end scraping workflow.
     
     Args:
-        sample_race_data: Test fixture providing race data structure
-    
+        sample_race_data: Fixture containing test race data
+        
     Raises:
-        NotImplementedError: Initial implementation throws this error
+        NotImplementedError: Expected error for unimplemented functionality
     """
     with pytest.raises(NotImplementedError):
         main()
+
+@pytest.mark.integration
+@pytest.mark.skip(reason="Feature not implemented yet")
+def test_scraper_full_workflow(sample_race_data: Dict[str, Any]) -> None:
+    """Test complete scraping workflow once implemented."""
+    pass

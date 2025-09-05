@@ -13,4 +13,8 @@ build-backend = "setuptools.build_meta"
 [tool.pytest.ini_options]
 testpaths = ["tests"]
 python_files = ["test_*.py"]
-addopts = "--cov"
+addopts = "--cov --markers"
+markers = [
+    "unit: marks tests as unit tests",
+    "integration: marks tests as integration tests"
+]
